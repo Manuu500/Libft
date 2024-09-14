@@ -12,11 +12,11 @@
 
 #include <unistd.h>
 
-void *ft_memcpy(void *dest, void *src, unsigned int n)
+void *ft_memcpy(void *dest, const void *src, unsigned int n)
 {
     int i;
-    char* a;
-    char* b;
+    unsigned const char* a;
+    unsigned char* b;
 
     b = dest;
     a = src;
