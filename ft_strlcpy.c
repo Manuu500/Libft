@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/17 19:13:22 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/09/17 19:16:01 by mruiz-ur         ###   ########.fr       */
+/*   Created: 2024/09/16 13:19:59 by mruiz-ur          #+#    #+#             */
+/*   Updated: 2024/09/16 18:19:37 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-#include <stdio.h>
-#include <unistd.h>
+char ft_strlcpy(char *dest, const char *src, size_t size)
+{
+	int i;
+	char temp;
 
-int	count(const char *s);
-
-#endif
+	i = 0;
+	while(dest[i] != '\0')
+	{
+		dest[i] = temp[i];
+		dest[i] = src[i];
+		src[i] = temp[i];
+	}
+	return (*dest);
+}

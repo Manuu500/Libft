@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/17 19:13:22 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/09/17 19:16:01 by mruiz-ur         ###   ########.fr       */
+/*   Created: 2024/09/17 11:59:15 by mruiz-ur          #+#    #+#             */
+/*   Updated: 2024/09/17 13:12:06 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
 #include <stdio.h>
-#include <unistd.h>
 
-int	count(const char *s);
-
-#endif
+int ft_tolower(int c)
+{
+	if (c >= 'A' && c <= 'Z')
+		c = c + 32;
+	return (c);
+}

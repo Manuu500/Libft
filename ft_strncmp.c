@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/17 19:13:22 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/09/17 19:16:01 by mruiz-ur         ###   ########.fr       */
+/*   Created: 2024/09/17 18:44:11 by mruiz-ur          #+#    #+#             */
+/*   Updated: 2024/09/17 19:26:26 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-#include <stdio.h>
-#include <unistd.h>
+#include "libft.h"
 
-int	count(const char *s);
+int ft_strncmp(const char *s1, const char *s2, size_t n)
+{
+	unsigned int i;
 
-#endif
+	i = 0;
+	while (s1[i] && s2[i] && i <= n)
+	{
+		if(s1[i] > s2[i])
+			return (1);
+		if(s1[i] < s2[i]) 
+			return (-1);
+		i++;
+	}
+	return (0);
+}
