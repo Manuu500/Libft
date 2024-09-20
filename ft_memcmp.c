@@ -6,7 +6,7 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 18:38:21 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/09/18 20:31:47 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/09/20 22:44:01 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,13 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	if(n == 0)
 		return (0);
-	while(a[i] && b[i] && i <= n)
+	while(a[i] && b[i] && i < n)
 	{
 		if(a[i] < b[i])
 			return (-1);
 		if(a[i] > b[i])
 			return (1);
+		i++;
 	}
 	return (0);
 }
