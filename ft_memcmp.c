@@ -1,28 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 13:19:59 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/09/19 12:29:56 by mruiz-ur         ###   ########.fr       */
+/*   Created: 2024/09/18 18:38:21 by mruiz-ur          #+#    #+#             */
+/*   Updated: 2024/09/18 20:31:47 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char ft_strlcpy(char *dest, const char *src, size_t size)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t i;
-	char* temp;
+	unsigned char* a;
+	unsigned char* b;
 
+	a = (unsigned char*)s1;
+	b = (unsigned char*)s2;
 	i = 0;
-	while(src[i] != '\0' && i < size)
+	if(n == 0)
+		return (0);
+	while(a[i] && b[i] && i <= n)
 	{
-	 	dest[i] = src[i];
-		i++;
+		if(a[i] < b[i])
+			return (-1);
+		if(a[i] > b[i])
+			return (1);
 	}
-	dest[i] = '\0';
-	return (*dest);
+	return (0);
+}
+
+int	main()
+{
+	char s[] = "dmo estas";
+	char c[] = "cmo estas";
+	int d = ft_memcmp(s, c, 4);
+	printf("%d", d);
 }

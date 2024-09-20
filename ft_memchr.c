@@ -6,7 +6,7 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 19:19:35 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/09/17 19:55:37 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/09/18 18:43:17 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,21 +19,32 @@ void *ft_memchr(const void *s, int c, size_t n)
 
 	d = (unsigned char *)s;
 	i = 0;
-	while (i < n)
+	while (d[i] != '\0' && i < n)
 	{
-		if(d[i] == (unsigned char)c)
+		if (d[i] == (char)c)
 		{
-			return (d + i);	
-		}	
+			return((char *)&d[i]);
+		}
 		i++;
 	}
 	return (0);
 }
 
-int	main()
-{
-	char s[] = "como estas";
-	int c = 'o';
-	char d = ft_memchr(s, c, 4);
-	printf("%c", d);
-}
+
+// void *ft_memchr(const void *s, int c, size_t n)
+// {
+// 	size_t i;
+// 	unsigned char* d;
+
+// 	d = (unsigned char *)s;
+// 	i = 0;
+// 	while (i < n)
+// 	{
+// 		if(d[i] == (unsigned char)c)
+// 		{
+// 			return (d + i);	
+// 		}	
+// 		i++;
+// 	}
+// 	return (0);
+// }

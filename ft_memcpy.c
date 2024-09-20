@@ -10,11 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void *ft_memcpy(void *dest, const void *src, unsigned int n)
 {
-    int i;
+    size_t i;
     unsigned const char* a;
     unsigned char* b;
 
@@ -28,5 +28,4 @@ void *ft_memcpy(void *dest, const void *src, unsigned int n)
         i++;
     }
     b[i] = '\0';
-
 }
