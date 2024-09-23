@@ -12,26 +12,24 @@
 
 #include "libft.h"
 
-void    *ft_memset(void *str, int value, unsigned int num)
+void	*ft_memset(void *str, int value, unsigned int num)
 {
-    int i;
-    char* a;
+	size_t	i;
+	char	*a;
 
-    a = str;
-    i = 0;
-    while(a[i] != '\0')
-    {
-        if(i <= num - 1)
-        {
-            a[i] = value;
-        }
-        write(1, &a[i], 1);
-        i++;
-    }
+	a = str;
+	i = 0;
+	while (a[i] != '\0' && i < num)
+	{
+		a[i] = value;
+		i++;
+	}
+	return (a);
 }
 
-int main()
-{
-    char text[] = "hola como esta";
-    ft_memset(text, 'a', 1);
-}
+//  int main()
+//  {
+//      char text[] = "hola como esta";
+//      char* i = ft_memset(text, 'a', 9);
+//      printf("%s/n", i);
+// }

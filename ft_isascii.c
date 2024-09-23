@@ -10,11 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii (int c)
+#include "libft.h"
+
+int	ft_isascii(int c)
 {
-    if (c >= 0 && c <= 126)
-    {
-        return (1);
-    }
-    return (0);
+	if (c >= 0 && c <= 126)
+		return (1);
+	return (0);
 }
+// int main() {
+//        char c1 = '\n';
+
+//        int i = ft_isascii(c1);
+//        printf("%d/n", i);
+//    }

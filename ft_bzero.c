@@ -12,21 +12,23 @@
 
 #include "libft.h"
 
-void    ft_bzero(void *s, unsigned int leng)
+void	ft_bzero(void *s, unsigned int leng)
 {
-    int i;
-    char* a;
+	unsigned int	i;
+	char			*a;
 
-    a = s;
-    i = 0;
-    while (a[i] != '\0')
-    {
-        
-        if (i <= leng - 1)
-        {
-            a[i] = '\0';
-        }
-        write(1, &a[i], 1);
-        i++;
-    }
+	a = s;
+	i = 0;
+	while (a[i] != '\0')
+	{
+		if (i <= leng - 1)
+			a[i] = '\0';
+		write(1, &a[i], 1);
+		i++;
+	}
 }
+// int main ()
+// {
+//      char word[] = "me llamo antonio";
+//       ft_bzero(word, 5);
+//        }

@@ -6,13 +6,15 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 11:25:20 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/09/17 13:12:11 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/09/23 21:35:39 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_toupper(int c)
 {
-	if(c >= 'a' && c <= 'z')
-			c = c - 32;
+	if (c >= 'a' && c <= 'z')
+		c = c - 32;
 	return (c);
 }

@@ -6,15 +6,21 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 11:59:15 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/09/17 13:12:06 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/09/23 21:34:28 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		c = c + 32;
 	return (c);
 }
+
+// int main()
+// {
+// 	char a = ft_tolower(1);
+// 	printf("%c", a);
+// }

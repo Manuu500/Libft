@@ -10,16 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char    ft_strlen(char *str)
-{
-    int i;
-    int cont;
+#include "libft.h"
 
-    cont = 0;
-    i = 0;
-    while(str[i++] != '\0')
-    {
-        cont++;
-    }
-    return (cont);
+char	ft_strlen(char *str)
+{
+	int	i;
+	int	cont;
+
+	cont = 0;
+	i = 0;
+	while (str[i++] != '\0')
+	{
+		cont++;
+	}
+	return (cont);
 }
+// int main()
+// {
+//    int i = ft_strlen("hola");
+//    printf("%d/n", i);
+// }
