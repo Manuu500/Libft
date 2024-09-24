@@ -6,7 +6,7 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 19:13:22 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/09/24 15:49:24 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/09/24 17:38:20 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,7 @@
 int	count(const char *s);
 void *ft_memcpy(void *dest, const void *src, unsigned int n);
 char    ft_strlen(char *str);
+void	ft_bzero(void *s, unsigned int leng);
+
 
 #endif
