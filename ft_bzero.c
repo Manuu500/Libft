@@ -23,12 +23,11 @@ void	ft_bzero(void *s, unsigned int leng)
 	{
 		if (i <= leng - 1)
 			a[i] = '\0';
-		write(1, &a[i], 1);
 		i++;
 	}
 }
-// int main ()
-// {
-//      char word[] = "me llamo antonio";
-//       ft_bzero(word, 5);
-//        }
+//  int main ()
+//  {
+//       char word[] = "me llamo antonio";
+//        ft_bzero(word, 5);
+//         }
