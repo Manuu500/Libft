@@ -1,14 +1,4 @@
-# Nombre del ejecutable
-TARGET = programa
-
-# Nombre de la librería estática
-LIBRARY = libmibiblioteca.a
-
-# Compilador
-CC = gcc
-
-# Flags del compilador
-CFLAGS = -Wall -Wextra -g
+NAME = libft.a
 
 # Archivos fuente
 SRCS = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
@@ -18,37 +8,30 @@ SRCS = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
        ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c \
        ft_toupper.c
 
-# Archivos objeto (se derivan de los archivos fuente)
-OBJS = $(SRCS:.c=.o)
+FLAGS = -Wall -Wextra -g -Werror
 
-# Regla por defecto: compilar todo
-all: $(TARGET)
+CC = gcc
 
-# Regla para crear la librería estática
-$(LIBRARY): $(OBJS)
-	ar rcs $(LIBRARY) $(OBJS)
+# CLEAN = rm -rf
 
-# Regla para compilar el ejecutable y enlazar la librería estática
-$(TARGET): $(LIBRARY) main.o
-	$(CC) $(CFLAGS) -o $(TARGET) main.o -L. -lmibiblioteca
+CLEAN = del /Q /F
 
-# Regla para compilar el archivo main.c
-main.o: main.c
-	$(CC) $(CFLAGS) -c main.c -o main.o
+OBJ := $(SRC:.c=.o)
 
-# Regla para compilar los archivos .o a partir de los archivos .c
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+all: $(NAME)
 
-# Limpiar archivos generados
+$(OBJ): %.o: %.c
+		$(CC) $(FLAGS) -c $^ -o $@
+
+$(NAME): $(OBJ)
+		ar -rsc $(NAME) $(OBJ)
+
 clean:
-	rm -f $(OBJS) main.o $(TARGET) $(LIBRARY)
+		@$(CLEAN) *.o
 
-# Limpiar archivos generados y de depuración
-cleanall: clean
-	rm -f *.out *.gch
+fclean: clean
+		@$(CLEAN) *.a
 
-# Regla 'run' para compilar y ejecutar el programa
-run: all
-	./$(TARGET)
+re: fclean all
 
+.PHONY: all clean fclean re

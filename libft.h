@@ -16,6 +16,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <string.h>
 
 void *ft_memcpy(void *dest, const void *src, unsigned int n);
 size_t    ft_strlen(const char *str);
