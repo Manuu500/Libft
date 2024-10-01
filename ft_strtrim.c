@@ -12,23 +12,6 @@
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
-{
-	size_t	i;
-	size_t	count;
-	char	*str;
-
-	count = word_count(s1, set);
-	i = 0;
-	while (s1[i] < count)
-	{
-		str[i] = s1[i];
-		i++;	
-	}
-	return (str);
-}
-
-
 size_t	word_count (char const *s1, char const *set)
 {
 	size_t	i;
@@ -50,6 +33,21 @@ size_t	word_count (char const *s1, char const *set)
 	return (i);
 }
 
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	size_t	i;
+	size_t	count;
+	char	*str;
+
+	count = word_count(s1, set);
+	i = 0;
+	while (s1[i] < count)
+	{
+		str[i] = s1[i];
+		i++;	
+	}
+	return (str);
+}
 
 int main()
 {
