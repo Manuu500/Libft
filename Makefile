@@ -51,3 +51,4 @@ cleanall: clean
 # Regla 'run' para compilar y ejecutar el programa
 run: all
 	./$(TARGET)
+
