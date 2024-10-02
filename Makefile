@@ -10,27 +10,27 @@ SRCS = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 
 FLAGS = -Wall -Wextra -g -Werror
 
-CC = gcc
+CC = cc
 
-# CLEAN = rm -rf
+CLEAN = rm -rf
 
-CLEAN = del /Q /F
-
-OBJ := $(SRC:.c=.o)
+# CLEAN = del /Q /F
 
 all: $(NAME)
 
-$(OBJ): %.o: %.c
-		$(CC) $(FLAGS) -c $^ -o $@
+OBJ = $(SRCS:.c=.o)
+
+$(OBJ): $(SRCS)
+	$(CC) -g $(FLAGS) -c $(SRCS)
 
 $(NAME): $(OBJ)
-		ar -rsc $(NAME) $(OBJ)
+	ar -rsc $(NAME) $(OBJ)
 
 clean:
-		@$(CLEAN) *.o
+	@$(CLEAN) *.o
 
 fclean: clean
-		@$(CLEAN) *.a
+	@$(CLEAN) *.a
 
 re: fclean all
 

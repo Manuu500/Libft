@@ -6,11 +6,9 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 12:46:33 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/09/23 20:52:27 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/10/02 15:34:28 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 #include "libft.h"
 
@@ -26,7 +24,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	if ((a_dest > b_src) && (b_src + n) > a_dest)
 	{
 		while (n--)
-			b_src = a_dest;
+			a_dest[n] = b_src[n];
 		return (dest);
 	}
 	return (ft_memcpy(dest, src, n));

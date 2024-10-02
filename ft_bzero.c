@@ -21,7 +21,7 @@ void	ft_bzero(void *s, unsigned int leng)
 	i = 0;
 	while (a[i] != '\0')
 	{
-		if (i <= leng - 1)
+		if (i < leng)
 			a[i] = '\0';
 		i++;
 	}

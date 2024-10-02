@@ -6,31 +6,31 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 18:12:19 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/09/24 20:23:20 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/10/02 14:35:10 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t    ft_strlen(const char *str)
-{
-    size_t    i;
-    size_t    cont;
+// size_t  ft_strlen(const char *str)
+// {
+//     size_t    i;
+//     size_t    cont;
 
-    cont = 0;
-    i = 0;
-    while (str[i++] != '\0')
-    {
-        cont++;
-    }
-    return (cont);
-}
+//     cont = 0;
+//     i = 0;
+//     while (str[i++] != '\0')
+//     {
+//         cont++;
+//     }
+//     return (cont);
+// }
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    size_t    i;
-    size_t    long_s;
-    char    *str;
+    size_t	i;
+    size_t	long_s;
+    char	*str;
 
     i = 0;
 	if (!s)
@@ -51,10 +51,10 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 }
 
 
-int main()
-{
-    char string[] = "holamellamoantonio";
-    char *i = ft_substr(string, 6, 14);
-    printf("%s\n", i);
-}
+// int main()
+// {
+//     char string[] = "holamellamoantonio";
+//     char *i = ft_substr(string, 6, 14);
+//     printf("%s\n", i);
+// }
 
