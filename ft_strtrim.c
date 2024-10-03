@@ -10,44 +10,32 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
+#include "libft.h"
 
-// size_t	word_count (char const *s1, char const *set)
-// {
-// 	size_t	i;
-// 	size_t	j;
-
-// 	i = ft_strlen(s1);
-	
-// 	while (s1)
-// 	{
-// 		j = 0;
-// 		while (s1[i - j] == 0)
-// 		{
-// 			if(s1[i - j] != 0)
-// 				return (j);
-// 			j++;
-// 		}
-// 		i--;
-// 	}
-// 	return (i);
-// }
-
-// char	*ft_strtrim(char const *s1, char const *set)
-// {
-// 	size_t	i;
-// 	size_t	count;
-// 	char	*str;
-
-// 	count = word_count(s1, set);
-// 	i = 0;
-// 	while (s1[i] < count)
-// 	{
-// 		str[i] = s1[i];
-// 		i++;	
-// 	}
-// 	return (str);
-// }
+char    *ft_strtrim(char const *s1, char const *set)
+{
+    char    *a;
+    size_t  i;
+    size_t  j;
+    size_t  k;
+    
+    k = 0;
+    j = strlen(s1) - 1;
+    i = 0;
+    while (s1[i] != '\0' && strchr(set, s1[i]))
+        i++;
+    while (s1[j] > 0 && strchr(set, s1[j]))
+        j--;
+    a = malloc(sizeof(char) * (j - i + 2)); // El + 2 se hace para reservarle un espacio al nulo
+    while (i <= j)
+    {
+      a[k] = s1[i];
+      i++;
+      k++;
+    }
+    a[k] = '\0';
+    return (a);
+}
 
 // int main()
 // {
