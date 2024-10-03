@@ -27,6 +27,8 @@ char    *ft_strtrim(char const *s1, char const *set)
     while (s1[j] > 0 && ft_strchr(set, s1[j]))
         j--;
     a = malloc(sizeof(char) * (j - i + 2)); // El + 2 se hace para reservarle un espacio al nulo
+    if (!a)
+        return (0);
     while (i <= j)
     {
       a[k] = s1[i];
