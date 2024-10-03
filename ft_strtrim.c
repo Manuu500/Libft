@@ -20,11 +20,11 @@ char    *ft_strtrim(char const *s1, char const *set)
     size_t  k;
     
     k = 0;
-    j = strlen(s1) - 1;
+    j = ft_strlen(s1) - 1;
     i = 0;
-    while (s1[i] != '\0' && strchr(set, s1[i]))
+    while (s1[i] != '\0' && ft_strchr(set, s1[i]))
         i++;
-    while (s1[j] > 0 && strchr(set, s1[j]))
+    while (s1[j] > 0 && ft_strchr(set, s1[j]))
         j--;
     a = malloc(sizeof(char) * (j - i + 2)); // El + 2 se hace para reservarle un espacio al nulo
     while (i <= j)
