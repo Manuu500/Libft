@@ -6,7 +6,7 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 18:12:19 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/10/02 14:35:10 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/10/05 17:27:56 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!s)
 		return (0);
 	if (start >= ft_strlen(s))
-		return (0);
+		return ("");
     long_s = ft_strlen((char*)s);
     str = (char *)malloc(sizeof(char) * ((long_s) - start) + 1);
     if (!str)

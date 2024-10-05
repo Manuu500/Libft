@@ -6,7 +6,7 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 17:30:26 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/09/30 18:51:33 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/10/05 17:45:54 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*build_letter(char *str, char const *s1, char const *s2)
 
 	i = 0;
 	j = 0;
-	while (s2[j] != '\0')
+	while (s2[j] != '\0' || s1[i] != '\0')
 	{
 		if (s1[i] != '\0')
 		{
