@@ -6,7 +6,7 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 15:44:51 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/09/24 17:17:01 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/10/08 19:40:22 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,10 @@ void	*ft_calloc(size_t num, size_t size)
 	void	*mem;
 
 	if (size == 0 || num == 0)
-		return (0);
+	{
+		num = 1;
+		size = 1;
+	}
 	mem = malloc(num * size);
 	if (!mem)
 		return (0);

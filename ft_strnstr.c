@@ -6,7 +6,7 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 20:55:38 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/10/05 16:48:34 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/10/08 19:31:54 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,11 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	{
 		j = 0;
 		while (big[i + j] == little[j] && (i + j < len))
+		{
+			if (little[j + 1] == '\0')
+				return ((char *)&big[i]);
 			j++;
-		if (little[j] == '\0')
-			return ((char *)&big[i]);
+		}
 		i++;
 	}
 	return (0);
