@@ -6,7 +6,7 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 17:17:08 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/09/30 17:21:45 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/10/08 13:23:39 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_putendl_fd(char *s, int fd)
 
 	str_long = ft_strlen(s);
 	write(fd, s, str_long);
-	write(1, "\n", 2);
+	write(fd, "\n", 1);
 }
 
 // int	main()
