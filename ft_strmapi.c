@@ -6,14 +6,15 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 20:27:09 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/10/03 20:27:09 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/10/08 13:16:22 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    ft_up (unsigned int *i, char str)
+char    ft_up (unsigned int i, char str)
 {
+    (void) i;
     if (str >= 97 && str <= 122)
         str -= 32;
     return (str);
@@ -39,8 +40,8 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
     return (str);
 }
 
-int main (void)
-{
-    char *i = ft_strmapi("HOLA", ft_up);
-    printf("%s\n", i);
-}
+// int main (void)
+// {
+//     char *i = ft_strmapi("HOLA", ft_up);
+//     printf("%s\n", i);
+// }
