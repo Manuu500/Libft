@@ -6,7 +6,7 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 18:12:19 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/10/05 17:27:56 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/10/08 18:47:43 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,15 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
     i = 0;
 	if (!s)
 		return (0);
-	if (start >= ft_strlen(s))
-		return ("");
     long_s = ft_strlen((char*)s);
-    str = (char *)malloc(sizeof(char) * ((long_s) - start) + 1);
+    if (start >= long_s)
+		return (ft_strdup(""));
+    if (len > long_s - start)
+        len = long_s - start;
+    str = ft_calloc(sizeof(char),(len + 1));
     if (!str)
         return (0);
-    while (s[i] != '\0' && i < len)
+    while (s[start + i] != '\0' && i < len)
     {
         str[i] = s[i + start];
         i++;
