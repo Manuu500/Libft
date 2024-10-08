@@ -19,10 +19,9 @@ void	ft_bzero(void *s, unsigned int leng)
 
 	a = s;
 	i = 0;
-	while (a[i] != '\0')
+	while (i < leng)
 	{
-		if (i < leng)
-			a[i] = '\0';
+		a[i] = '\0';
 		i++;
 	}
 }

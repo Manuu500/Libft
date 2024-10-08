@@ -6,7 +6,7 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 19:03:30 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/10/02 15:05:05 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/10/08 17:07:52 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,17 @@ char    *ft_strtrim(char const *s1, char const *set)
     size_t  j;
     size_t  k;
     
+    if (!s1)
+        return (0);
+    if (!set)
+        return (ft_strdup(s1));
+
     k = 0;
     j = ft_strlen(s1) - 1;
     i = 0;
     while (s1[i] != '\0' && ft_strchr(set, s1[i]))
         i++;
-    while (s1[j] > 0 && ft_strchr(set, s1[j]))
+    while (j > i && ft_strchr(set, s1[j]))
         j--;
     a = malloc(sizeof(char) * (j - i + 2)); // El + 2 se hace para reservarle un espacio al nulo
     if (!a)

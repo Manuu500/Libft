@@ -6,7 +6,7 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 19:13:22 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/10/08 13:04:32 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/10/08 15:59:26 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char *ft_strchr(const char *s, int c);
 char *ft_strdup(const char *s);
 char *ft_strjoin(char const *s1, char const *s2);
 size_t ft_strlcat(char *dest, const char *src, size_t size);
-char ft_strlcpy(char *dest, const char *src, size_t size);
+size_t ft_strlcpy(char *dest, const char *src, size_t size);
 int ft_strncmp(const char *s1, const char *s2, size_t n);
 char *ft_strnstr(const char *big, const char *little, size_t len);
 char *ft_strrchr(const char *s, int c);
