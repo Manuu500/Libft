@@ -15,7 +15,7 @@
 
 size_t    get_num_length(int a)
 {
-    int    i;
+    size_t    i;
 
     i = 0;
 	if (a == 0)
@@ -33,17 +33,46 @@ size_t    get_num_length(int a)
     return (i);
 }
 
-char	*ft_itoa(int n)
+char	*function(char *str, size_t i, char sign, int n)
 {
-	int	con_str;
-	char	str;
-	size_t	s_long;
-	
-	con_str = get_num_length(n);
-	str = malloc((con_str + 1));
+	size_t    cont;
+
+	cont = get_num_length(n);
+	str = malloc(sizeof(char) * (cont + 1));
+	if (!str)
+		return (0);
+	str[cont] = '\0';
+	i = cont - 1;
+	if (n < 0)
+	{
+	sign = -1;
+	n = -n;
+	}
+	while (n > 0)
+	{
+		str[i--] = n % 10 + '0';    
+		n = n / 10; //elimina el ultimo dígito del número n
+	}
+	if (sign == -1)
+	str[0] = '-';
+	return (str);
 }
 
- int main()
- {
- 	ft_itoa(34);
- }
+char    *ft_itoa(int n)
+{
+    char    *str;
+    size_t    i;
+    char    sign;
+
+    sign = 1;
+	str = function(str, i, sign, n);
+	if (n == -2147483648)
+		return("2147483648");
+    return (str);
+}
+
+//  int main()
+//  {
+// 	char	*i = ft_itoa(-34);
+// 	printf("%s\n", i);
+//  }
