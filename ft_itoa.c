@@ -6,7 +6,7 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 20:01:57 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/10/08 20:42:51 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/10/11 15:52:33 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,10 @@ size_t    get_num_length(int a)
     return (i);
 }
 
-char	*function(char *str, size_t i, char sign, int n)
+char	*function(char *str, char sign, int n)
 {
 	size_t    cont;
-
+	size_t		 i;
 	cont = get_num_length(n);
 	str = malloc(sizeof(char) * (cont + 1));
 	if (!str)
@@ -45,9 +45,11 @@ char	*function(char *str, size_t i, char sign, int n)
 	i = cont - 1;
 	if (n < 0)
 	{
-	sign = -1;
-	n = -n;
+		sign = -1;
+		n = -n;
 	}
+	// if (n == 0)
+	// 	return ('0');
 	while (n > 0)
 	{
 		str[i--] = n % 10 + '0';    
@@ -61,13 +63,15 @@ char	*function(char *str, size_t i, char sign, int n)
 char    *ft_itoa(int n)
 {
     char    *str;
-    size_t    i;
     char    sign;
 
+	str = NULL;
     sign = 1;
-	str = function(str, i, sign, n);
+	if (n == 0)
+		return (ft_strdup("0"));
 	if (n == -2147483648)
-		return("2147483648");
+		return(ft_strdup("-2147483648"));
+	str = function(str, sign, n);
     return (str);
 }
 
