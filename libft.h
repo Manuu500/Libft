@@ -6,7 +6,7 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 19:13:22 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/10/11 15:19:23 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/10/15 15:32:58 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ int ft_toupper(int c);
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void ft_striteri(char *s, void (*f)(unsigned int, char*));
 char    *ft_itoa(int n);
+char **ft_split(char const *s, char c);
 
 
 #endif
