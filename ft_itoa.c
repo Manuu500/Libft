@@ -6,14 +6,14 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 20:01:57 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/10/11 15:52:33 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/10/15 19:26:53 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 
-size_t    get_num_length(int a)
+static size_t    get_num_length(int a)
 {
     size_t    i;
 
@@ -33,7 +33,7 @@ size_t    get_num_length(int a)
     return (i);
 }
 
-char	*function(char *str, char sign, int n)
+static char	*function(char *str, char sign, int n)
 {
 	size_t    cont;
 	size_t		 i;

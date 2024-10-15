@@ -6,7 +6,7 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 15:57:21 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/10/15 17:50:01 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/10/15 19:21:49 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static char	word_count(char const *s, char c)
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] != c && s[i + 1] == c)
+		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
 			counter++;	
 		i++;
 	}
@@ -60,6 +60,19 @@ static size_t    word_counter(const char *s, char c, size_t z)
     return (ctr);
 }
 
+static void free_mem(char **str)
+{
+	size_t	i;
+
+	i = 0;
+	while (str[i])
+	{
+		free(str[i]);
+		i++;
+	}
+	free(str);
+}
+
 char **ft_split(char const *s, char c)
 {
 	char	**str;
@@ -67,15 +80,15 @@ char **ft_split(char const *s, char c)
 	size_t	f;
 	size_t	j;
 	size_t	ctr;
-
+	
 	j = 0;
 	str_long = 0;
 	ctr = 0;
 	f = 0;
 	str_long = word_count(s,c);
-	str = ft_calloc(sizeof(char *),(str_long + 1));
+	str = malloc(sizeof(char *) * (str_long + 1));
 	if (!str)
-		return (0);
+		return (NULL);
 	while(s[f])
 	{
 		while (s[f] == c)
@@ -84,6 +97,11 @@ char **ft_split(char const *s, char c)
 		if (ctr > 0)
 		{
 			str[j] = ft_substr(s, f, ctr);
+			if (!str[j])
+			{
+				free_mem(str);
+				return (NULL);
+			}
 			j++;
 		}  
 		f = f + ctr;
