@@ -6,33 +6,33 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 19:09:34 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/10/11 15:17:54 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/10/15 20:04:59 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *f_up(unsigned int i, char   *str)
+void	*f_up(unsigned int i, char *str)
 {
-    (void) i;
-    if (str >= (char *)'a' && str <= (char *)'z')
-    {
-        str -= 32;
-        write(1, &str, 1);
-    }
-    return (str);
+	(void) i;
+	if (str >= (char *) 'a' && str <= (char *) 'z')
+	{
+		str -= 32;
+		write(1, &str, 1);
+	}
+	return (str);
 }
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-    size_t  i;
+	size_t	i;
 
-    i = 0;
-    while (s[i] != '\0')
-    {
-        f(i, &s[i]);
-        i++;
-    }
+	i = 0;
+	while (s[i] != '\0')
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
 //  int main (void)
 //  {
