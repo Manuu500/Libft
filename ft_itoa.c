@@ -6,7 +6,7 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 20:01:57 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/10/15 20:01:32 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/10/16 14:06:21 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static size_t	get_num_length(int a)
 	return (i);
 }
 
-static char	*function(char *str, char sign, int n)
+static char	*itoa_body(char *str, char sign, int n)
 {
 	size_t	cont;
 	size_t	i;
@@ -69,7 +69,7 @@ char	*ft_itoa(int n)
 		return (ft_strdup("0"));
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
-	str = function(str, sign, n);
+	str = itoa_body(str, sign, n);
 	return (str);
 }
 
