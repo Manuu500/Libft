@@ -8,6 +8,8 @@ SRCS = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
        ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c \
        ft_toupper.c ft_strmapi.c ft_striteri.c ft_itoa.c ft_split.c
 
+SRCS_BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c
+
 FLAGS = -Wall -Wextra -g -Werror
 
 CC = cc
@@ -16,15 +18,23 @@ CLEAN = rm -rf
 
 # CLEAN = del /Q /F
 
-all: $(NAME)
+OBJ := $(SRCS:.c=.o)
 
-OBJ = $(SRCS:.c=.o)
+OBJ_BONUS := $(SRCS_BONUS:.c=.o)
+
+all: $(NAME)
 
 $(OBJ): $(SRCS)
 	$(CC) -g $(FLAGS) -c $(SRCS)
 
 $(NAME): $(OBJ)
 	ar -rsc $(NAME) $(OBJ)
+
+bonus: $(OBJ_BONUS)
+	ar -rsc $(NAME) $(OBJ_BONUS)
+
+$(OBJ_BONUS): %.o: %.c
+	$(CC) -g $(FLAGS) -c $(SRCS_BONUS)
 
 clean:
 	@$(CLEAN) *.o
@@ -34,4 +44,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus

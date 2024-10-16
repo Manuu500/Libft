@@ -6,7 +6,7 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 19:13:22 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/10/16 14:04:50 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/10/16 16:13:46 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,13 @@
 # include <string.h>
 
 void	*ft_memcpy(void *dest, const void *src, unsigned int n);
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
+
 size_t	ft_strlen(const char *str);
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, unsigned int leng);
@@ -52,5 +59,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	*ft_itoa(int n);
 char	**ft_split(char const *s, char c);
+t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
 
 #endif
