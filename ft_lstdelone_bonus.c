@@ -6,7 +6,7 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 20:10:26 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/10/16 20:20:17 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/10/16 21:25:53 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	if (lst == NULL)
-		return;
+		return ;
 	(*del)(lst->content);
 	free (lst);
 }

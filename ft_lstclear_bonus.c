@@ -6,7 +6,7 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 20:22:32 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/10/16 20:42:20 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/10/16 21:26:40 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*list;
 
-	/* list = *lst; */
 	while (*lst != NULL)
 	{
 		list = (*lst)->next;
