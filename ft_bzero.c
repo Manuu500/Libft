@@ -25,8 +25,3 @@ void	ft_bzero(void *s, unsigned int leng)
 		i++;
 	}
 }
-//  int main ()
-//  {
-//       char word[] = "me llamo antonio";
-//        ft_bzero(word, 5);
-//         }

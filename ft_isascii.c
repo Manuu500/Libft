@@ -18,9 +18,3 @@ int	ft_isascii(int c)
 		return (1);
 	return (0);
 }
-// int main() {
-//        char c1 = '\n';
-
-//        int i = ft_isascii(c1);
-//        printf("%d/n", i);
-//    }

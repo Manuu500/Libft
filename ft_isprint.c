@@ -18,10 +18,3 @@ int	ft_isprint(int c)
 		return (1);
 	return (0);
 }
-
-//   int main() {
-//      char c1 = 127;
-
-//      int i = ft_isprint(c1);
-//      printf("%d/n", i);
-//  }

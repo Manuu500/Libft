@@ -23,8 +23,3 @@ size_t	ft_strlen(const char *str)
 		cont++;
 	return (cont);
 }
-// int main()
-// {
-//    int i = ft_strlen("hola");
-//    printf("%d/n", i);
-// }

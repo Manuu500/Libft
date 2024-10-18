@@ -6,7 +6,7 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 18:12:19 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/10/15 19:47:27 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/10/18 14:16:28 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,10 +51,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str[i] = '\0';
 	return (str);
 }
-
-// int main()
-// {
-//     char string[] = "holamellamoantonio";
-//     char *i = ft_substr(string, 6, 14);
-//     printf("%s\n", i);
-// }

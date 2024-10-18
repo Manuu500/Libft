@@ -6,7 +6,7 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 11:59:15 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/09/23 21:34:28 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/10/18 14:16:36 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,3 @@ int	ft_tolower(int c)
 		c = c + 32;
 	return (c);
 }
-
-// int main()
-// {
-// 	char a = ft_tolower(1);
-// 	printf("%c", a);
-// }

@@ -6,7 +6,7 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 20:01:57 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/10/16 14:06:21 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/10/18 14:17:42 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,9 +72,3 @@ char	*ft_itoa(int n)
 	str = itoa_body(str, sign, n);
 	return (str);
 }
-
-//  int main()
-//  {
-// 	char	*i = ft_itoa(-34);
-// 	printf("%s\n", i);
-//  }

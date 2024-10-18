@@ -6,7 +6,7 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 17:54:16 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/09/23 19:45:07 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/10/18 14:12:47 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,12 +38,3 @@ int	ft_atoi(const char *str)
 	}
 	return (n * sign);
 }
-//  int main()
-//  {
-//  	char str[] = "-42hola";
-//  	int i = ft_atoi(str);
-//  	printf("%d\n", i);
-// 	char number[] = "-42hola";
-// 	int b = atoi(number);
-// 	printf("%d\n", b);
-//}

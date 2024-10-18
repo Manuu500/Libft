@@ -6,7 +6,7 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 14:10:09 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/10/02 16:26:30 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/10/18 14:15:53 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,3 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	dest[i + j] = '\0';
 	return (i + ft_strlen(src));
 }
-//  int    main(void)
-//  {
-//      char dest[15] = "holaaaa";
-//      char src[] = "adios";
-//      int i = ft_strlcat(dest, src, sizeof(dest));
-//      printf("%d", i);    
-//  }

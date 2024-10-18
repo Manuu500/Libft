@@ -6,7 +6,7 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 17:22:14 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/10/15 19:43:49 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/10/18 14:15:27 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,3 @@ void	ft_putnbr_fd(int n, int fd)
 		write (fd, &c, 1);
 	}
 }
-
-// int main()
-// {
-// 	ft_putnbr_fd('"-1"', 1);
-// }

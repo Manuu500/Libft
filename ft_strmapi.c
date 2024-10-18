@@ -6,7 +6,7 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 20:27:09 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/10/15 19:56:19 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/10/18 14:16:04 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-
-// int main (void)
-// {
-//     char *i = ft_strmapi("HOLA", ft_up);
-//     printf("%s\n", i);
-// }

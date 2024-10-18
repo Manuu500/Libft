@@ -18,10 +18,3 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
-
-//   int main() {
-//       char c1 = 'a';
-
-//       int i = ft_isalpha(c1);
-//       printf("%d/n", i);
-//   }

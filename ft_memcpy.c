@@ -32,11 +32,3 @@ void	*ft_memcpy(void *dest, const void *src, unsigned int n)
 	}
 	return (dest);
 }
-
-// int main()
-// {
-//     const char w1[] = "alksdjflkslkfjkdslñf";
-//     char w2[] = "adios";
-//     char* i = ft_memcpy(w1, w2, 6);
-//     printf("%s/n", i);
-// }

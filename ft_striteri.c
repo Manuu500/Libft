@@ -6,7 +6,7 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 19:09:34 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/10/15 20:04:59 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/10/18 14:17:25 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-//  int main (void)
-//  {
-//     ft_strmapi("HOLA", f_up);
-//  }

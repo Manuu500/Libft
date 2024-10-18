@@ -6,7 +6,7 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 19:03:30 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/10/15 19:52:38 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/10/18 14:16:23 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	a[k] = '\0';
 	return (a);
 }
-
-// int main()
-// {
-// 	char str1[] = "holamellamoantonio";
-// 	char str2[] = "antonio";
-// 	char *i = ft_st

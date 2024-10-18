@@ -26,10 +26,3 @@ void	*ft_memset(void *str, int value, unsigned int num)
 	}
 	return (a);
 }
-
-//  int main()
-//  {
-//      char text[] = "hola como esta";
-//      char* i = ft_memset(text, 'a', 9);
-//      printf("%s/n", i);
-// }

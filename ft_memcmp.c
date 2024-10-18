@@ -6,7 +6,7 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 18:38:21 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/09/23 20:35:38 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/10/18 14:14:01 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-// int	main()
-// {
-// 	char s[] = "holaa estas";
-// 	char c[] = "hola estas";
-// 	int d = ft_memcmp(s, c, 14);
-// 	printf("%d", d);
-// }

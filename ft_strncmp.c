@@ -6,7 +6,7 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 18:44:11 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/10/05 16:35:12 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/10/18 14:16:08 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-
-// int main()
-// {
-// 	int i = ft_strncmp("hola", "adios", 5);	
-// 	printf("%d/n", i);
-// }

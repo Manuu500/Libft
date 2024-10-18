@@ -6,7 +6,7 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 17:30:26 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/10/05 17:45:54 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2024/10/18 14:15:48 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,22 +51,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str_cmp = (char *)build_letter(str1, s1, s2);
 	return (str_cmp);
 }
-
-//  size_t	ft_strlen(const char *str)
-//  {
-//  	int	i;
-//  	int	cont;
-
-//  	cont = 0;
-//  	i = 0;
-//  	while (str[i++] != '\0')
-//  		cont++;
-//  	return (cont);
-//  }
-//  int main()
-//  {
-//      char str1[] = "hola";
-//  	char str2[] = "mellamoantonio";
-//      char *i = ft_strjoin(str1, str2);
-//      printf("%s\n", i);
-//  }

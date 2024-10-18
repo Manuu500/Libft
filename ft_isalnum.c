@@ -19,11 +19,3 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
-//  int main() {
-//      char c1 = 'A';
-//      char c2 = '-';
-
-//      int i = ft_isalnum(c2);
-//      printf("%d/n", i);
-//      return 0;
-//  }
