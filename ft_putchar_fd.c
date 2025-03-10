@@ -6,13 +6,18 @@
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 17:01:16 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2024/10/18 14:14:27 by mruiz-ur         ###   ########.fr       */
+/*   Updated: 2025/03/10 13:35:41 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+int	ft_putchar_fd(char c, int fd)
 {
+	int	counter;
+
+	counter = 0;
 	write (fd, &c, 1);
+	counter++;
+	return (counter);
 }

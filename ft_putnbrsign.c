@@ -1,38 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putnbrsign.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mruiz-ur <mruiz-ur@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/30 17:22:14 by mruiz-ur          #+#    #+#             */
-/*   Updated: 2025/03/10 13:39:05 by mruiz-ur         ###   ########.fr       */
+/*   Created: 2025/01/13 11:44:51 by mruiz-ur          #+#    #+#             */
+/*   Updated: 2025/03/10 13:26:35 by mruiz-ur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putnbr_fd(int n, int fd)
+int	ft_putnbrsign(unsigned int num)
 {
-	char	c;
-	int		counter;
+	int	counter;
 
-	counter = 0;
-	if (n == -2147483648)
-		return (write (fd, "-2147483648", 11));
-	if (n < 0)
-	{
-		write(fd, "-", 1);
-		counter++;
-		n = -n;
-	}
-	if (n >= 10)
-	{
-		counter += ft_putnbr_fd(n / 10, fd);
-	}
-	c = n % 10 + '0';
-	write (fd, &c, 1);
-	counter++;
+	counter = ft_putnbrlong(num, 1);
 	return (counter);
 }
-
