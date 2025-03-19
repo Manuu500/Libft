@@ -72,5 +72,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 int	ft_print_hex(unsigned long long number, int upper);
 int	ft_putnbrsign(unsigned int num);
 int	ft_putnbrlong(unsigned int n, int fd);
+char	*ft_get_next_line(int fd);
 
 #endif
